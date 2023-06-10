@@ -16,4 +16,4 @@ print("New_features performance:", other.accuracy(testdata))
 
 #other.pickle
 best = pickle.load(open("other.pickle", "rb"))
-print("Naive Bayes Classifier:", best.accuracy(testdata))
+print("Other_new_features1 performance:", best.accuracy(testdata))

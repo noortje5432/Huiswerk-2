@@ -13,7 +13,7 @@ from nltk.corpus import conll2002 as conll
 
 traindata = conll.chunked_sents("ned.train") # Train_data
 
-new_test = ConsecutiveNPChunker(new_features, traindata ) # new_features model
+new_test = ConsecutiveNPChunker(new_features, traindata ) # new_features model, beste model
 with open("best.pickle", "wb") as output: 
     pickle.dump(new_test, output)
 
