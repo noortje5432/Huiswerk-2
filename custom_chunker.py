@@ -1,13 +1,7 @@
 """
-FILE: incomplete_custom_chunker.py AS GIVEN IN ASSIGNMENT
-
-Based on code from http://www.nltk.org/book/ch07.html#code-classifier-chunker
 
 Authors: Alexis Dimitriadis, Meaghan Fowlie, and #TODO you!
 
-Use ConsecutiveNPChunker to train and use a classifier
-
-Treat _ConsecutiveNPChunkTagger as private: do not use it directly; it is called by ConsecutiveNPChunker
 
 """
 from abc import ABC

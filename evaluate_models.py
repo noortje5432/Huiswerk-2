@@ -10,10 +10,10 @@ from nltk.corpus import conll2002 as conll
 
 testdata = conll.chunked_sents("ned.testa")
 
-#other.pickle voor nu test.pickle genoemd, omdat we nog de functie moeten veranderen
-other = pickle.load(open("test.pickle", "rb"))
+#best.pickle
+other = pickle.load(open("best.pickle", "rb"))
 print("New_features performance:", other.accuracy(testdata))
 
-#Best.pickle
-best = pickle.load(open("best.pickle", "rb"))
+#other.pickle
+best = pickle.load(open("other.pickle", "rb"))
 print("Naive Bayes Classifier:", best.accuracy(testdata))
