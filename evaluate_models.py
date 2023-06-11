@@ -12,8 +12,8 @@ testdata = conll.chunked_sents("ned.testa")
 
 #best.pickle
 other = pickle.load(open("best.pickle", "rb"))
-print("New_features performance:", other.accuracy(testdata))
+print("New_features performance:\n", other.accuracy(testdata))
 
 #other.pickle
 best = pickle.load(open("other.pickle", "rb"))
-print("Other_new_features1 performance:", best.accuracy(testdata))
+print("Other_new_features1 performance:\n", best.accuracy(testdata))

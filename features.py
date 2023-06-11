@@ -4,6 +4,17 @@ Created on Mon Jun  5 18:12:24 2023
 
 @author: jasmijn
 """
+import csv
+
+conn = open('C:/Users/jasmi/OneDrive/Bureaublad/GitHub/Huiswerk-2/VNC2013.csv', encoding="utf-8")
+myreader = csv.reader(conn)
+raw_data = [ row for row in myreader ]
+conn.close()
+
+names = []
+for name, MV, amount in raw_data:
+    if int(amount) > 1:
+         names.append(name)
 
 def test_features(sentence, i, history):
     """dummy Chunker features designed to test the Chunker class for correctness
@@ -33,17 +44,7 @@ def new_features(sentence, i, history):
         - mv: word that ends with 's'       
         - has_digit: word with digits
     """ 
-    import csv
-
-    conn = open("VNC2013.csv", encoding="utf-8")
-    myreader = csv.reader(conn)
-    raw_data = [ row for row in myreader ]
-    conn.close()
-    
-    names = []
-    for name, MV, amount in raw_data:
-        if int(amount) > 1:
-            names.append(name)
+   
 
     word, pos = sentence[i]
     if word.isupper():
@@ -172,17 +173,7 @@ def other_new_features2(sentence, i, history):
         - previous_word: previous word
         - next_word: next word
     """
-    import csv
 
-    conn = open("VNC2013.csv", encoding="utf-8")
-    myreader = csv.reader(conn)
-    raw_data = [ row for row in myreader ]
-    conn.close()
-    
-    names = []
-    for name, MV, amount in raw_data:
-        if int(amount) > 1:
-            names.append(name)
     
     word, pos = sentence[i]
     

@@ -5,9 +5,9 @@ Created on Mon Jun  5 18:38:11 2023
 @author: jasmi
 
 """
-import nltk
+
 from custom_chunker import ConsecutiveNPChunker
-from features import new_features, other_new_features1, other_new_features2  
+from features import new_features, other_new_features1, other_new_features2
 import pickle 
 from nltk.corpus import conll2002 as conll
 
