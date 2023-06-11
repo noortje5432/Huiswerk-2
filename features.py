@@ -33,7 +33,7 @@ def test_features(sentence, i, history):
             }
 
 def new_features(sentence, i, history):
-    """Other.pickle model
+    """
     Features:
         - the POS tag of the word
         - full_capital: Full capital word
