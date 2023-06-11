@@ -6,7 +6,7 @@ Created on Mon Jun  5 18:12:24 2023
 """
 import csv
 
-conn = open('C:/Users/jasmi/OneDrive/Bureaublad/GitHub/Huiswerk-2/VNC2013.csv', encoding="utf-8")
+conn = open('VNC2013.csv', encoding="utf-8")
 myreader = csv.reader(conn)
 raw_data = [ row for row in myreader ]
 conn.close()
