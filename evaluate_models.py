@@ -23,7 +23,7 @@ another = pickle.load(open("another.pickle", "rb"))
 print("Other_new_features2 performance:\n", another.accuracy(testdata))
 
 #Saved output put in an text file
-with open("evaluation.txt", 'w') as f:
+with open("evaluation_output.txt", 'w') as f:
     f.write("The best.pickle: New_features\n" + str(best.accuracy(testdata)))
     f.write("\n")
     f.write("\nOther_new_features1 performance:\n" + str(other.accuracy(testdata)))
