@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
+File: evaluate_models.py
 Created on Thu Jun  8 12:13:13 2023
 
-@author: jasmi
+@author: Jasmijn Lie
+
+Loads and evaluates models with test data and saves the output in a evaluation_output.txt file
 """
 
 import pickle

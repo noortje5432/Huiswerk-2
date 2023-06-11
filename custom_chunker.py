@@ -1,7 +1,8 @@
 """
+File: custom_chunker.py
+Authors: Alexis Dimitriadis, Meaghan Fowlie, Jasmijn Lie, Noortje Peeters en Vincent van Akker
 
-Authors: Alexis Dimitriadis, Meaghan Fowlie, and #TODO you!
-
+Use ConsecutiveNPChunker to train and use a classifier
 
 """
 from abc import ABC
@@ -99,8 +100,7 @@ class ConsecutiveNPChunker(nltk.ChunkParserI, ABC):
 
 #%%
 class _ConsecutiveNPChunkTagger(nltk.TaggerI):
-    """This class is not meant to be
-    used directly: Use ConsecutiveNPChunker instead.
+    """
     Attributes:
         feature_function: map from
                     (sentence, word index, history of features assigned so far)
@@ -125,12 +125,10 @@ class _ConsecutiveNPChunkTagger(nltk.TaggerI):
         """
 
         self.train_set = []  # initialise self.train_set
-        self.feature_function = feature_function
-        self.create_training_data(training_sentences) 
+        self.feature_function = feature_function        # stores the feature_function parameter as self.feature_function
+        self.create_training_data(training_sentences)   # calls self.create_training_data on training_sentences
         
-        # TODO: store the feature_function parameter as self.feature_function
-        # TODO: call self.create_training_data on training_sentences
-        # TODO: check that algorithm is one of "NaiveBayes", "DecisionTree", "IIS", and "GIS"
+        # check that algorithm is one of "NaiveBayes", "DecisionTree", "IIS", and "GIS"
         # and raise an error if it's not
         if algorithm not in ["NaiveBayes", "DecisionTree", "IIS",  "GIS"]:
             raise Exception("Not allowed to use this algorithm")
@@ -163,32 +161,22 @@ class _ConsecutiveNPChunkTagger(nltk.TaggerI):
         stores a list of (dict, IOB tag) pairs as self.train_set
 
         :param training_sentences: list of nltk.Trees with IOB tags
-
-        TODO make your function into a method that
-            uses the stored self.feature_function,
-            calls self.reformat_corpus_for_tagger on training_sentences,
-            and stores the training data as self.train_set
-            (and update this comment!)
-        """
-        # TODO reformat sentences to ((word, pos_tag), iob_tag) pairs
-        # TODO turn the sentences into appropriate training data by finding their features
-        # TODO store them in self.train_set
-        train_sentences = self.reformat_corpus_for_tagger(training_sentences).copy()    
+        :param history: list of the history of the words
+        :param feature: proper training data
+        
+        """   
+              
+        train_sentences = self.reformat_corpus_for_tagger(training_sentences).copy()        # reformat sentences to ((word, pos_tag), iob_tag) pairs
     
-        # TODO turn the sentences into appropriate training data by finding their features
-        #self.train_set = []
         for sent in train_sentences:
             history = []
             for i in range(len(sent)):
                 untag = nltk.tag.untag(sent)
-                feature = self.feature_function(untag, i, history)
+                feature = self.feature_function(untag, i, history) # turn the sentences into appropriate training data by finding their features
                 history.append(sent[i][1])
                 tup = (feature, sent[i][1])
-                self.train_set.append(tup)
-        #return self.train_set
-        ...
-
-
+                self.train_set.append(tup)                         # store them in self.train_set
+    
     def tag(self, sentence):
         """
         uses the trained classifier to tag a sentence

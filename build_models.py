@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
+File: build_models.py
 Created on Mon Jun  5 18:38:11 2023
 
-@author: jasmi
+@author: Jasmijn Lie
+
+Trains and pickles different classifiers from features.py
 
 """
 

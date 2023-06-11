@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
+File: features.py
 Created on Mon Jun  5 18:12:24 2023
 
-@author: jasmijn
+@author: Jasmijn Lie, Noortje Peeters, Vincent van Akker
+
+Feature extraction functions and an import csv for a list of names
 """
 import csv
 
