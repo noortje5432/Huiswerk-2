@@ -11,7 +11,8 @@ myreader = csv.reader(conn)
 raw_data = [ row for row in myreader ]
 conn.close()
 
-names = []
+#List of names from VNC2013.csv
+names = [] 
 for name, MV, amount in raw_data:
     if int(amount) > 1:
          names.append(name)

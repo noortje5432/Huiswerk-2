@@ -1,0 +1,20 @@
+The best.pickle: New_features
+ChunkParse score:
+    IOB Accuracy:  95.0%%
+    Precision:     49.4%%
+    Recall:        60.7%%
+    F-Measure:     54.5%%
+
+Other_new_features1 performance:
+ChunkParse score:
+    IOB Accuracy:  93.0%%
+    Precision:     38.8%%
+    Recall:        53.9%%
+    F-Measure:     45.1%%
+
+Other_new_features2 performance:
+ChunkParse score:
+    IOB Accuracy:  92.9%%
+    Precision:     37.7%%
+    Recall:        22.6%%
+    F-Measure:     28.3%%
